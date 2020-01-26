@@ -1,0 +1,331 @@
+:root {
+    --theme: rgb(53, 97, 114);
+    --ylva: rgb(245, 230, 191);
+    --yellow: #d28616;
+    --blue: #172854;
+    --orange: #c45124;
+    --black: #0e0d12;
+    --white: #e8e6d9;   
+    --red: #b72c25;   
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: var(--black-color);
+}
+body {
+    overflow:hidden;
+    margin: auto;
+    background: var(--white);
+    position: relative;
+
+}
+
+/* HEADER */
+.header-wrapper {
+    min-height: 90px;
+ }
+ .header-wrapper .header {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    background: var(--white);
+}
+.header-wrapper .header .inner_header {
+    min-width:1200px;        /* Suppose you want minimum width of 1000px */
+    max-width:1300px;        /* Suppose you want minimum width of 1000px */
+
+    border-right: 30px solid var(--black);
+    background: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space;
+    align-items: baseline;
+    width: 50%;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+
+
+.header-wrapper .header .inner_header .inner_inner {
+    padding-top: 1%;
+    width: 100%;
+    display:inline-flex;
+    justify-content : space-between;
+    
+}
+
+.header-wrapper .header .inner_header .inner_inner h1 {
+
+    margin: 0 30;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+}
+
+.header-wrapper .header .inner_header .inner_inner .navigation {
+    position: relative;
+    text-align: right;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    overflow: auto;
+}
+
+.navigation li {
+    color: red;    
+    position: relative;
+    text-align: right;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    overflow: auto;
+}
+.navigation li:hover, .navigation li:visited {
+    color:var(--theme-color);
+}
+
+.menu {
+    display: none;
+}
+.header .return {
+    font-size: 20px;
+    color: var(--black);
+}
+.header .return a{
+    color: inherit;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .content {
+  padding-top: 20%;
+}
+
+.background {
+    min-width:1200px;        /* Suppose you want minimum width of 1000px */
+    max-width:1300px;        /* Suppose you want minimum width of 1000px */
+    min-height:500px;        /* Suppose you want minimum width of 1000px */
+    max-height:5000px;        /* Suppose you want minimum width of 1000px */
+
+    border: 30px solid var(--black);
+    border-top: 0px;
+    margin: auto;
+    background-size: contain;
+    background-color: var(--black);
+    width: 50%;
+    z-index: 100;
+    overflow-x: hidden;
+    height: 100%;
+    position: sticky;
+}
+
+/*
+White line with picture on it
+*/
+.background .whiteline{
+    width: 100%;
+    height: 20%;
+    background-color: var(--white);
+    position: sticky;
+    top: 0%;
+    display:flex;
+    z-index: 1;
+}
+.background .whiteline .intro{
+    position: absolute;
+    width: 51%;
+    height: 100%;
+    margin : 0 auto;
+    padding : 10px;
+    justify-content : space-between;
+
+}
+
+.background .whiteline .intro .my-picture img{
+    height: 100%; 
+    border-radius: 50%;
+    padding-left: 20%;
+    filter: grayscale(100%) brightness(100%) sepia(100%) hue-rotate(-180deg) saturate(300%) contrast(0.8)
+}
+
+.background .whiteline .intro .info{
+    text-align: left;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 200;
+    padding-left: 0%;
+    padding-top: 7%;
+    overflow: auto;
+}
+
+/*
+Circle with text on it
+*/
+.background .circle{
+    width: 100%;
+    height: 0;
+    padding-bottom:100%;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    position: sticky;
+    z-index: 2;
+    margin-left: 40%;
+    margin-top: 50%;
+    top: -5%;
+
+}
+.background .circle h1 {
+    text-align: right;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    margin-right: 3%;
+    margin-bottom: 3%;
+}
+.background .circle .about{
+    color: var(--white);
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    margin: 19% 45% 20% 10%;
+}
+
+/*
+This is the one with the badges on it
+*/
+.background .whitediag1{
+    width: 100%;
+    height: 20%;
+    background-color: var(--white);
+    position: sticky;
+    z-index: 5;
+    top: 25%;
+    margin-top: 80%;
+    transform: skewY(-25deg);
+    }
+
+    .background .whitediag1 .badges{
+        width:100%;
+        height: 100%;
+        display: inline-flex;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .background .whitediag1 .badges .box-icon{
+        width: 100%;
+
+        display: flex;
+        justify-content: center;  
+        align-items: center;
+    }
+    .background .whitediag1 .badges .box-icon img{
+        width: 70%;
+        height: 70%;
+        transform: skewY(25deg);   
+    }
+/*
+Red diagonal line
+*/
+.background .reddiag{
+    width: 100%;
+    height: 40%;
+    background-color: var(--red);
+    position: sticky;
+    z-index: 8;
+    top:40%;
+    margin-top: 160%;
+    transform: skewY(-60deg);
+}
+.background .reddiag .projects{
+    width:100%;
+    height: 100%;
+    display: inline-flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.background .reddiag .projects .box-icon{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+.background .reddiag .projects .box-icon img{
+    width: 70%;
+    height: 70%;
+    transform: skewY(60deg);   
+}
+
+/*
+White part with work on it
+*/
+.background .work{
+    -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    z-index: 7;
+    margin-bottom: 0%;
+    background-color: var(--white);
+    top:100%;
+    margin-top: -30%;
+}
+.background .work .work1{
+    color: var(--black);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 10%;
+    padding-top: 20%;
+    padding-top: 20%;
+}
+.background .work .work2{
+    color: var(--black);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 10%;
+    padding-top: 20%;
+}
+
+
+/*
+Black bottom contact bar
+*/
+.footer{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    z-index: 10;
+    background-color: var(--black);
+}
+
+.footer .orangeline{
+    width: 73%;
+    height: 20%;
+    position: relative;
+    z-index: 11;
+    bottom: 0%;
+    background-color: var(--orange);
+}
+.orangeline .contact{
+    text-align: left;
+    color: var(--black);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    padding: 4%; 
+    overflow: auto;
+}
