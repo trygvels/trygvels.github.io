@@ -19,153 +19,86 @@
     color: var(--black-color);
 }
 body {
-    overflow:hidden;
-    margin: auto;
     background: var(--white);
-    position: relative;
+}
 
+#main {
+    width: 900px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    margin: auto;
 }
 
 /* HEADER */
-.header-wrapper {
-    min-height: 90px;
- }
- .header-wrapper .header {
-    position: relative;
-    width: 100%;
-    height: 110px;
-    background: var(--white);
-}
-.header-wrapper .header .inner_header {
-    min-width:1200px;        /* Suppose you want minimum width of 1000px */
-    max-width:1300px;        /* Suppose you want minimum width of 1000px */
 
-    border-right: 30px solid var(--black);
+.header {
+    position: float;
+    width: 900px;
+    margin: auto;
+    height: 90px;
     background: var(--black);
-    display: flex;
-    flex-direction: column;
-    justify-content: space;
-    align-items: baseline;
-    width: 50%;
-    height: 100%;
-    overflow-x: hidden;
-    margin: 0 auto;
 }
 
-
-.header-wrapper .header .inner_header .inner_inner {
-    padding-top: 1%;
-    width: 100%;
-    display:inline-flex;
-    justify-content : space-between;
-    
-}
-
-.header-wrapper .header .inner_header .inner_inner h1 {
-
-    margin: 0 30;
+ .header h1 {
+    width: 600px;
+    position: relative;
+    padding: 1%;
     color: var(--white);
     font-family: 'Roboto', sans-serif;
-    font-size: 80px;
+    border: 5px solid red;
+    font-size: 50px;
 }
 
-.header-wrapper .header .inner_header .inner_inner .navigation {
-    position: relative;
+ .header .navigation {
+    width: 100px;
     text-align: right;
     color: var(--white);
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
-    overflow: auto;
-}
-
-.navigation li {
-    color: red;    
-    position: relative;
-    text-align: right;
-    color: var(--white);
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    overflow: auto;
-}
-.navigation li:hover, .navigation li:visited {
-    color:var(--theme-color);
-}
-
-.menu {
-    display: none;
-}
-.header .return {
-    font-size: 20px;
-    color: var(--black);
-}
-.header .return a{
-    color: inherit;
-}
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-.sticky + .content {
-  padding-top: 20%;
+    border: 5px solid red;
 }
 
 .background {
-    min-width:1200px;        /* Suppose you want minimum width of 1000px */
-    max-width:1300px;        /* Suppose you want minimum width of 1000px */
-    min-height:500px;        /* Suppose you want minimum width of 1000px */
-    max-height:5000px;        /* Suppose you want minimum width of 1000px */
-
     border: 30px solid var(--black);
     border-top: 0px;
+    width: 900px;
+    height: 100%;
+    position: relative;
     margin: auto;
     background-size: contain;
     background-color: var(--black);
-    width: 50%;
+    
     z-index: 100;
     overflow-x: hidden;
-    height: 100%;
-    position: sticky;
 }
-
 /*
 White line with picture on it
 */
 .background .whiteline{
     width: 100%;
-    height: 20%;
+    height: 200px;
     background-color: var(--white);
     position: sticky;
-    top: 0%;
-    display:flex;
+    top:0px;
     z-index: 1;
 }
-.background .whiteline .intro{
-    position: absolute;
-    width: 51%;
-    height: 100%;
-    margin : 0 auto;
-    padding : 10px;
-    justify-content : space-between;
 
-}
-
-.background .whiteline .intro .my-picture img{
+.background .whiteline img{
+    position: relative;
     height: 100%; 
     border-radius: 50%;
-    padding-left: 20%;
+    padding-left: 10%;
     filter: grayscale(100%) brightness(100%) sepia(100%) hue-rotate(-180deg) saturate(300%) contrast(0.8)
 }
 
-.background .whiteline .intro .info{
-    text-align: left;
+.background .info{
+    padding: 1%;
+    position: fixed;
     color: var(--white);
     font-family: 'Roboto', sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 200;
-    padding-left: 0%;
-    padding-top: 7%;
-    overflow: auto;
 }
 
 /*
@@ -185,20 +118,18 @@ Circle with text on it
 
 }
 .background .circle h1 {
+    width: 50%
     text-align: right;
     color: var(--white);
     font-family: 'Roboto', sans-serif;
-    font-size: 80px;
-    margin-right: 3%;
-    margin-bottom: 3%;
+    font-size: 20px;
 }
 .background .circle .about{
+    width: 50%;
     color: var(--white);
-    position: absolute;
+    position: relative;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 200;
-    margin: 19% 45% 20% 10%;
+    font-size: 16px;
 }
 
 /*
@@ -215,25 +146,25 @@ This is the one with the badges on it
     transform: skewY(-25deg);
     }
 
-    .background .whitediag1 .badges{
-        width:100%;
-        height: 100%;
-        display: inline-flex;
-        padding-top: 5%;
-        padding-bottom: 5%;
-    }
-    .background .whitediag1 .badges .box-icon{
-        width: 100%;
+.background .whitediag1 .badges{
+    width:100%;
+    height: 100%;
+    display: inline-flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.background .whitediag1 .badges .box-icon{
+    width: 100%;
 
-        display: flex;
-        justify-content: center;  
-        align-items: center;
-    }
-    .background .whitediag1 .badges .box-icon img{
-        width: 70%;
-        height: 70%;
-        transform: skewY(25deg);   
-    }
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+.background .whitediag1 .badges .box-icon img{
+    width: 70%;
+    height: 70%;
+    transform: skewY(25deg);   
+}
 /*
 Red diagonal line
 */
@@ -278,9 +209,8 @@ White part with work on it
     height: 100%;
     position: sticky;
     z-index: 7;
-    margin-bottom: 0%;
     background-color: var(--white);
-    top:100%;
+    top:80%;
     margin-top: -30%;
 }
 .background .work .work1{
@@ -289,7 +219,6 @@ White part with work on it
     font-size: 20px;
     font-weight: 200;
     padding: 10%;
-    padding-top: 20%;
     padding-top: 20%;
 }
 .background .work .work2{
@@ -305,27 +234,20 @@ White part with work on it
 /*
 Black bottom contact bar
 */
-.footer{
-    width: 100%;
-    height: 50%;
-    position: absolute;
-    z-index: 10;
-    background-color: var(--black);
-}
+/* HEADER */
+.footer {
+    position: fixed;
+    min-height: 90px;
+    z-index: 1000;
 
-.footer .orangeline{
-    width: 73%;
-    height: 20%;
-    position: relative;
-    z-index: 11;
-    bottom: 0%;
-    background-color: var(--orange);
-}
-.orangeline .contact{
-    text-align: left;
-    color: var(--black);
+ }
+.footer .contact{
+    position: sticky;
+    
+    background: var(--black);
+
+    color: var(--white);
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    padding: 4%; 
-    overflow: auto;
-}
+    font-size: 20px;
+    font-weight: 200;
+ }
