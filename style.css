@@ -33,31 +33,46 @@ body {
 /* HEADER */
 
 .header {
-    position: float;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
     width: 900px;
+    display: inline-flex;
     margin: auto;
     height: 90px;
     background: var(--black);
+    
 }
 
  .header h1 {
-    width: 600px;
-    position: relative;
-    padding: 1%;
+    width: 650px;
+    display: inline-flex;
+    padding-top: 3%;
     color: var(--white);
     font-family: 'Roboto', sans-serif;
-    border: 5px solid red;
-    font-size: 50px;
+    font-size: 55px;
 }
 
- .header .navigation {
+.header .navigation {
+    padding: 1%;
+    padding-right: 0%;
+    position: relative;
+    left: 10%;
     width: 100px;
     text-align: right;
     color: var(--white);
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
-    border: 5px solid red;
 }
+
+
+.header .navigation:hover {
+    color: var(--red);
+    }
+
+.header .navigation h1:hover {
+    color: var(--red);
+    }
 
 .background {
     border: 30px solid var(--black);
@@ -80,7 +95,7 @@ White line with picture on it
     height: 200px;
     background-color: var(--white);
     position: sticky;
-    top:0px;
+    top:90px;
     z-index: 1;
 }
 
@@ -94,7 +109,7 @@ White line with picture on it
 
 .background .info{
     padding: 1%;
-    position: fixed;
+    position: relative;
     color: var(--white);
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
@@ -110,11 +125,12 @@ Circle with text on it
     padding-bottom:100%;
     background-color: var(--yellow);
     border-radius: 50%;
-    position: sticky;
     z-index: 2;
     margin-left: 40%;
     margin-top: 50%;
     top: -5%;
+    transform: translateY(0px); 
+    transition: all 2s;
 
 }
 .background .circle h1 {
@@ -125,7 +141,9 @@ Circle with text on it
     font-size: 20px;
 }
 .background .circle .about{
-    width: 50%;
+    width: 40%;
+    top: 130px;
+    left: 135px;
     color: var(--white);
     position: relative;
     font-family: 'Roboto', sans-serif;
@@ -137,7 +155,7 @@ This is the one with the badges on it
 */
 .background .whitediag1{
     width: 100%;
-    height: 20%;
+    height: 200px;
     background-color: var(--white);
     position: sticky;
     z-index: 5;
@@ -170,10 +188,10 @@ Red diagonal line
 */
 .background .reddiag{
     width: 100%;
-    height: 40%;
+    height: 400px;
     background-color: var(--red);
     position: sticky;
-    z-index: 8;
+    z-index: 5;
     top:40%;
     margin-top: 160%;
     transform: skewY(-60deg);
@@ -206,7 +224,7 @@ White part with work on it
     -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
     clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
     width: 100%;
-    height: 100%;
+    height: 1400px;
     position: sticky;
     z-index: 7;
     background-color: var(--white);
@@ -219,7 +237,7 @@ White part with work on it
     font-size: 20px;
     font-weight: 200;
     padding: 10%;
-    padding-top: 20%;
+    padding-top: 200px;
 }
 .background .work .work2{
     color: var(--black);
@@ -235,19 +253,20 @@ White part with work on it
 Black bottom contact bar
 */
 /* HEADER */
-.footer {
+.background .footer {
+    position: relative;
+    color: var(--black);
     position: fixed;
-    min-height: 90px;
-    z-index: 1000;
-
- }
-.footer .contact{
-    position: sticky;
+    bottom: 30px;
+    width: 900px;
+    z-index: 1000000;
+}
+.background .footer .contact{
+    display: flex;
+    justify-content: space-between;  
     
     background: var(--black);
-
     color: var(--white);
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 200;
+    font-size: 10px;
  }
